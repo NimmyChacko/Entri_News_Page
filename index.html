@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Entri News homepage</title>
+ <style>
+  @import url('https://fonts.google.com/specimen/Inter');
+:root{
+    --dark-grayish-blue:hsl(236, 13%, 42%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Soft-orange: hsl(35, 77%, 62%);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter";
+}
+
+.container{
+    margin:0 auto;
+    max-width:1240px;
+    padding:0 30px;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 0px;
+    animation:1s ease-in 0.5s TopSlide;
+}
+@keyframes TopSlide{
+  0%{
+    transform: translateY(-30px) scale(0.9);
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0px) scale(1);
+  }
+}
+.links ul{
+    display: flex;
+    gap:1rem;
+}
+
+.links ul li{
+    list-style: none;
+   
+}
+.links ul a{
+    text-decoration: none;
+    color:var(--dark-grayish-blue)
+}
+.links ul li a:hover{
+    color:var(--Soft-red);
+    transition: 0.5s color ease;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:2rem;
+}
+.new_articles {
+    background-color:hsl(240, 100%, 5%) ;
+    font-family: 'Inter', sans-serif;
+    color: hsl(36, 100%, 99%);
+    padding: 1em;
+    animation:1s ease-in 0.5s RightSlide;
+  }
+  @keyframes RightSlide{
+    0%{
+      transform: translateX(100px) scale(0.9);
+      opacity:0;
+    }
+    100%{
+      opacity:1;
+      transform:translateX(0px) scale(1);
+    }
+  }
+  .heading {
+    font-size:2.5em ;
+    margin-top: 7px;
+    color:var(--Soft-orange) ;
+  }
+  .article {margin:25px 5px;}
+
+.article a{
+  color: hsl(36, 100%, 99%);
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: inline-block;
+ transition:color 0.5s ease;
+ 
+}
+.article a:hover{
+color:var(--Soft-orange);
+}
+.article p{
+  color:hsl(233,8%,79%);
+}
+.hero_text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+.hero_text h1{
+    font-size:3rem;
+font-weight:800
+}
+.button {
+    background-color:hsl(5, 85%, 63%) ;
+    padding: 1em 1.5em;
+    display: inline-block;
+    margin-top: 1.5em;
+    text-decoration: none;
+    color: hsl(36, 100%, 99%) ;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    transition:background-color 0.5s ease;
+   
+  }
+  .button:hover{
+    background-color: hsl(240, 100%, 5%);
+  }
+
+  .call_out p{
+    color:hsl(236, 13%, 42%);
+    line-height: 1.5;
+  }
+  .articles{
+    display:flex;
+    gap:1rem;
+    margin:4rem 0;
+
+  }
+  .new_article{
+    display:flex;
+    gap:1rem;
+  }
+
+  .new_article content{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .new_article img{
+    max-width:120px;
+}
+.content h2 {
+    color: hsl(233, 8%, 79%);
+    font-size: 2em;
+  
+  }
+  .content h2:hover{
+color: var(--Soft-orange);
+  }
+
+  @media  screen and (max-width:800px) {
+    .hero{
+      grid-template-columns: 1fr;
+    }
+    .articles{
+      flex-direction: column;
+    }
+  }
+ </style>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <img src="assets/images/logo.svg" alt="Entri News Logo" class="logo">
+      <nav class="links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">  New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <main class="hero">
+
+    <section class="hero_description">
+      <img src="assets/images/image-web-3-desktop.jpg" alt="">
+
+      <div class="hero_text">
+        <h1>The Bright Future of Web 3.0?</h1>
+        <div class="call_out">
+          <p> We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?
+          </p>
+          <a href="" class="button">Read more</a>
+        </div>
+      </div>
+      </section>
+    
+    
+    <aside class="new_articles">
+      <h1 class="heading">New</h1>
+      <article class="article">
+        <a href="#">Hydrogen VS Electric Cars</a>
+        <p> Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </article>
+ 
+
+    
+      <article class="article">
+        <a href="">The Downsides of AI Artistry</a>
+        <p> What are the possible adverse effects of on-demand AI image generation?</p>
+      </article>
+   
+
+    
+      <article class="article">
+        <a href=""> Is VC Funding Drying Up?</a>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </article>
+    </aside>
+  
+    </main>
+
+    <section class="articles">
+<article class="new_article">
+<img src="assets/images/image-retro-pcs.jpg" alt="">
+<div class="content">
+  <h3>01</h3>
+  <h2>  Reviving Retro PCs</h2>
+  <p>What happens when old PCs are given modern upgrades?</p>
+</div>
+
+</article>
+
+<article class="new_article">
+  <img src="assets/images/image-top-laptops.jpg" alt="">
+  <div class="content">
+    <h3>02</h3>
+    <h2>  Top 10 Laptops of 2022</h2>
+    <p> Our best picks for various needs and budgets.</p>
+  </div>
+  </article>
+
+  <article class="new_article">
+    <img src="assets/images/image-gaming-growth.jpg" alt="">
+    <div class="content">
+      <h3>03</h3>
+      <h2> The Growth of Gaming</h2>
+      <p>How the pandemic has sparked fresh opportunities.</p>
+    </div>
+    
+    </article>
+
+    </section>
+
+  </div>
+
+
+  
+
+
+
+</body>
+</html>
